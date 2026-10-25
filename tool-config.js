@@ -1,0 +1,49 @@
+export const tool={
+  "id": "E063",
+  "slug": "eng-impulse",
+  "title": "평균힘 충격량 계산기",
+  "title_en": "Average Force Impulse Calculator",
+  "category": "역학",
+  "category_en": "Mechanics",
+  "fields": [
+    {
+      "key": "f",
+      "label": "평균힘 F_avg",
+      "label_en": "Average force F_avg",
+      "dimension": "force",
+      "example": 20,
+      "constraint": "signed",
+      "display_unit": "N",
+      "display_value": "20"
+    },
+    {
+      "key": "dt",
+      "label": "작용 시간 Δt",
+      "label_en": "Duration Δt",
+      "dimension": "time",
+      "example": 0.25,
+      "constraint": "positive",
+      "display_unit": "s",
+      "display_value": "0.25"
+    }
+  ],
+  "result_label": "1차원 충격량 J",
+  "result_label_en": "One-dimensional impulse J",
+  "result_dimension": "momentum",
+  "formula": "J = F_avg Δt",
+  "purpose": "같은 축의 평균힘과 작용 시간으로 충격량 계산",
+  "purpose_en": "Calculate one-dimensional impulse from average force and duration.",
+  "assumptions": "Δt>0. F_avg는 같은 축의 시간평균힘이다. 힘의 부호를 유지하며 힘 최대값을 평균값으로 대신하지 않는다. 충돌 피크·힘-시간 곡선은 제외한다.",
+  "assumptions_en": "Required: Δt>0 and a signed time-average force on one axis. Peak force is not an average force. Collision peaks and force-time curves are excluded.",
+  "sources": [
+    {
+      "label": "OpenStax · 9 2 impulse and collisions",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/9-2-impulse-and-collisions"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-impulse/",
+  "repository": "https://github.com/NaNaCompany/eng-impulse",
+  "output_unit": "kgms"
+};
